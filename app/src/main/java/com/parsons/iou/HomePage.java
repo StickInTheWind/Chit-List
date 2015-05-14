@@ -1,38 +1,29 @@
 package com.parsons.iou;
 
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 
-public class HomePage extends ActionBarActivity {
+import android.app.Activity;
+import android.content.Intent;
+import android.R.layout;
+import android.view.View;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+
+public class HomePage extends Activity{
+    protected void onCreate() {
         setContentView(R.layout.activity_home_page);
+
+        final View controlsView = findViewById(R.id.fullscreen_content_controls);
+        final View contentView = findViewById(R.id.fullscreen_content);
+
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home_page, menu);
-        return true;
+    public void openFriendsTab(View view){
+        Intent intent = new Intent(this, FriendsTab.class);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void openWidgets(View view){
+        //Intent intent = new Intent(this, FriendsTab.class);
+    }
+    public void openAccountManagement(View view){
+        //Intent intent = new Intent(this, FriendsTab.class);
     }
 }
