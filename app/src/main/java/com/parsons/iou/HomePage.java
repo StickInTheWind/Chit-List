@@ -9,25 +9,45 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class HomePage extends Activity{
+import com.parse.ParseUser;
+import com.parse.ui.ParseLoginActivity;
+import com.parse.ui.ParseLoginBuilder;
 
+
+public class HomePage extends Activity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_home_page);
-        TextView name = (TextView) findViewById(R.id.Name);
-        TextView total = (TextView) findViewById(R.id.Total);
+        ParseUser currentUser = ParseUser.getCurrentUser();
 
-        // Need to define these variables later once User class is created.
-        String firstName = "YO";
-        Double totalAmount = 4.00;
+            // show the signup or login screen
+            ParseLoginBuilder builder = new ParseLoginBuilder(HomePage.this);
+            startActivityForResult(builder.build(), 0);
 
-       // Overrides the text views to establish Welcome, (Persons name) and display the correct owed total.
-        name.append(firstName);
-        ;
-        total.append(String.valueOf(totalAmountColor(totalAmount, total)));
+            // do stuff with the user
+            TextView name = (TextView) findViewById(R.id.Name);
+            TextView total = (TextView) findViewById(R.id.Total);
+            // Need to define these variables later once User class is created.
+            String firstName = "Yo";
+            Double totalAmount = 4.00;
+
+            // Overrides the text views to establish Welcome, (Persons name) and display the correct owed total.
+            name.append(firstName);
+            total.append(String.valueOf(totalAmountColor(totalAmount, total)));
+
+
+
+
+;
+
+
+
+
+
+
 
 
     }
