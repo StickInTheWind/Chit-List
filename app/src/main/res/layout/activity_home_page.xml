@@ -17,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Total:"
-        android:id="@+id/textView"
+        android:text="Total: $"
+        android:id="@+id/Total"
         android:layout_alignBottom="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
         android:layout_marginBottom="43dp" />
@@ -57,7 +57,7 @@
         android:id="@+id/recentActivity"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView"
+        android:layout_toEndOf="@+id/button"
         android:layout_below="@+id/textView4" />
 
     <ExpandableListView
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="WELCOME, "
-        android:id="@+id/textView2"
+        android:id="@+id/Name"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/imageView" />
 
@@ -84,7 +84,8 @@
         android:text="Owe you the most:"
         android:id="@+id/textView3"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_alignEnd="@+id/top3Debts" />
+        android:layout_alignEnd="@+id/top3Debts"
+        android:layout_alignParentTop="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -94,4 +95,5 @@
         android:id="@+id/textView4"
         android:layout_below="@+id/top3Debts"
         android:layout_alignStart="@+id/textView3" />
+
 </RelativeLayout>

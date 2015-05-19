@@ -4,7 +4,6 @@ import com.parsons.iou.util.SystemUiHider;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.R.layout;
 
 
 /**
@@ -15,15 +14,10 @@ import android.R.layout;
  */
 public class FriendsTab extends Activity {
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_friends_tab);
 
-        final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
-
-    }
+    };
 }
