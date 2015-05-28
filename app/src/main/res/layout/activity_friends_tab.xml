@@ -1,6 +1,6 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#0099cc"
+    android:layout_height="match_parent" android:background="#d8c199"
     tools:context="com.parsons.iou.FriendsTab">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -11,26 +11,29 @@
          android:fitsSystemWindows. -->
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="My Friends"
-        android:textSize="48dp"
         android:id="@+id/textView5"
-        android:layout_gravity="center_horizontal|top" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Friend"
-        android:textSize="20dp
-        "
         android:id="@+id/button4"
-        android:layout_gravity="center_horizontal|bottom" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="469dp"
+        android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_gravity="right|center_vertical" />
-</FrameLayout>
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button4"
+        />
+</RelativeLayout>
