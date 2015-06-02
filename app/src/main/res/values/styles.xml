@@ -1,9 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <color name="custom_background_color">#d8c199</color>
+
+    <style name="AppTheme" parent="android:Theme.NoTitleBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- When working with colors you must first define the color outside of the styles class-->
+
+        <item name="android:windowBackground"> @color/custom_background_color </item>
+        <item name="android:colorBackground">@color/custom_background_color</item>
+
     </style>
+
 
     <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>

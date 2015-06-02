@@ -5,6 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomePage">
 
+
+
     <ImageView
         android:layout_width="128dp"
         android:layout_height="128dp"
@@ -22,6 +24,14 @@
         android:layout_alignBottom="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
         android:layout_marginBottom="43dp" />
+    <Button
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:onClick="openFriendsTab"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="128dp"
@@ -36,29 +46,22 @@
     <Button
         android:layout_width="128dp"
         android:layout_height="wrap_content"
-        android:text="Friends"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:onClick="openFriendsTab"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:text="Account Management"
+        android:text="Log Out"
         android:id="@+id/button3"
-        android:onClick= "openAccountManagement"
+        android:onClick= "logOut"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/recentActivity" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recentActivity"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/button"
-        android:layout_below="@+id/textView4" />
+        android:layout_below="@+id/textView4"
+        android:layout_above="@+id/button3" />
 
     <ExpandableListView
         android:layout_width="wrap_content"
@@ -72,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="WELCOME, "
+        android:text="Welcome, "
         android:id="@+id/Name"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/imageView" />

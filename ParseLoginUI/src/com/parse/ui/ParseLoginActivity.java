@@ -85,6 +85,9 @@ public class ParseLoginActivity extends FragmentActivity implements
   // Although Activity.isDestroyed() is in API 17, we implement it anyways for older versions.
   private boolean destroyed = false;
 
+  public void onBackPressed() {
+
+  }
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

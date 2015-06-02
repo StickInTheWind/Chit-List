@@ -34,7 +34,8 @@ public class ParseLoginBuilder {
   public ParseLoginBuilder(Context context) {
     this.context = context;
   }
-
+  public void onBackPressed() {
+  }
   /**
    * Customize the logo shown in the login screens
    *
@@ -214,11 +215,12 @@ public class ParseLoginBuilder {
    * Whether to show the Facebook login option on the login screen. Default is
    * false.
    *
-   * @param enabled = true;
+   * @param enabled
    *     Whether to show the facebook login.
    * @return The caller instance to allow chaining.
    */
   public ParseLoginBuilder setFacebookLoginEnabled(boolean enabled) {
+    enabled=true;
     config.setFacebookLoginEnabled(enabled);
     return this;
   }
@@ -270,6 +272,7 @@ public class ParseLoginBuilder {
    * @return The caller instance to allow chaining.
    */
   public ParseLoginBuilder setTwitterLoginEnabled(boolean enabled) {
+    enabled = true;
     config.setTwitterLoginEnabled(enabled);
     return this;
   }

@@ -12,4 +12,11 @@
     <string name="parse_app_id">zEwSr1Reo2HJcUT4q5y5zBLmG4T1CwdQgqGe7Rt1</string>
     <string name="parse_client_key">D8u4QbkwHs8B5nX2DUbNJsKKzG3Mw0odiplYBPlQ</string>
     <string name ="facebook_app_id">1640700536163556</string>
+    <!-- Doesn't work yet -->
+    <!-- Added on 6/1/15 Larry Parsons -->
+    <string-array name="my_facebook_permissions">
+        <item>public_profile</item>
+        <item>user_friends</item>
+    </string-array>
+
 </resources>
