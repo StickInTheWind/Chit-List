@@ -36,4 +36,10 @@ public class FriendsTab extends Activity {
         Intent intent = new Intent(this, FriendInfo.class);
         startActivity(intent);
     }
+
+    public void openAddFriend(View view){
+        // This adds the "listener" to make the button go from one activity to another. The button in the xml must have an onClick methed.
+        Intent intent = new Intent(this, AddFriend.class);
+        startActivity(intent);
+    }
 }
