@@ -32,6 +32,10 @@ public class HomePage extends Activity{
     }
     // Checks to see if use is logged on then continues with application.
     //===================================================================
+  protected void onActivityResult(int requestCode, int resultCode,
+                                  Intent data) {
+      isLoggedOn();
+  }
     public void isLoggedOn(){
         ParseUser currentUser = ParseUser.getCurrentUser();
 
@@ -39,9 +43,9 @@ public class HomePage extends Activity{
             // show the signup or login screen
             ParseLoginBuilder builder = new ParseLoginBuilder(HomePage.this);
             startActivityForResult(builder.build(), 0);
+
         } else {
 
-        }
             // do stuff with the user
             //Basic Query to access the current user so we can pull data and then later save to local
             ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
@@ -58,13 +62,15 @@ public class HomePage extends Activity{
 
 
             String firstName = (String) currentUser.get("name");
-            Double totalAmount = 4.00;
+            Double totalAmount = currentUser.getDouble("total");
 
             // Overrides the text views to establish Welcome, (Persons name) and display the correct owed total.
             TextView name = (TextView) findViewById(R.id.Name);
             TextView total = (TextView) findViewById(R.id.Total);
             name.append(firstName);
             total.append(String.valueOf(totalAmountColor(totalAmount, total)));
+        }
+
 
     }
 
