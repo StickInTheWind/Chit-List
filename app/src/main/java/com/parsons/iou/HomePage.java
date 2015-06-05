@@ -8,8 +8,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -31,7 +29,6 @@ public class HomePage extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         isLoggedOn();
-        GoogleApiClient
     }
     // Checks to see if use is logged on then continues with application.
     //===================================================================
