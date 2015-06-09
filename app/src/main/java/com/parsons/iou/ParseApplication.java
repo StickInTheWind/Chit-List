@@ -16,7 +16,7 @@ public class ParseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        // Add your initialization code here
+        // Added my initialization code here
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, MY_APPLICATION_ID, MY_CLIENT_KEY);
         ParseFacebookUtils.initialize(this);

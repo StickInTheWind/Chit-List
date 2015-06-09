@@ -64,6 +64,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parsons.iou.FriendsTab" />
         </activity>
+
         <activity
             android:name="com.parse.ui.ParseLoginActivity"
             android:label="@string/app_name"

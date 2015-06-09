@@ -8,14 +8,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import com.parse.GetCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
+
 import com.parse.ParseUser;
 import com.parse.ui.ParseLoginBuilder;
-
-
 
 
 public class HomePage extends Activity{
@@ -46,23 +41,9 @@ public class HomePage extends Activity{
 
         } else {
 
-            // do stuff with the user
-            //Basic Query to access the current user so we can pull data and then later save to local
-            ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
-            query.getInBackground(currentUser.getObjectId(), new GetCallback<ParseObject>() {
-                public void done(ParseObject object, ParseException e) {
-                    if (e == null) {
-                        // object will be your User
-                    } else {
-                        // something went wrong
-                    }
-                }
-            });
-            // do stuff with the user
-
-
             String firstName = (String) currentUser.get("name");
             Double totalAmount = currentUser.getDouble("total");
+
 
             // Overrides the text views to establish Welcome, (Persons name) and display the correct owed total.
             TextView name = (TextView) findViewById(R.id.Name);

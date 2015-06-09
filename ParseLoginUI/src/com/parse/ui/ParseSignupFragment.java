@@ -193,6 +193,7 @@ public class ParseSignupFragment extends ParseLoginFragmentBase implements OnCli
       if (firstName.length() != 0) {
         user.put(USER_OBJECT_NAME_FIELD, firstName + " " + lastName);
       }
+      user.put("total",0.00);
 
 
       loadingStart();
