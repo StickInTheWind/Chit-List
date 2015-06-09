@@ -28,19 +28,21 @@ public class AddFriend extends Activity {
 
     public void AddButton(View view){
 
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        ParseObject data = new ParseObject("friends");
+        ParseUser currentUser = ParseUser.getCurrentUser(); //Establishes current user
+        ParseObject data = new ParseObject("friends"); //establishes a data object of our Friends Parse Class
         String name;
         String number;
-        EditText nameInput = (EditText) findViewById(R.id.editText);
+        EditText nameInput = (EditText) findViewById(R.id.editText); //Takes the name from the input
         name = nameInput.getText().toString();
-        EditText numberInput = (EditText) findViewById(R.id.editText2);
+        EditText numberInput = (EditText) findViewById(R.id.editText2); //Takes the number from input
         number = numberInput.getText().toString();
 
+        //Places name, number, and sets total amount owed to 0.00, places into database.
         data.put("name", name);
         data.put("phoneNumber", Double.parseDouble(number));
         data.put("totalAmount", 0.00);
 
+        //substantiates the owner of the friend.
         data.put("parent", currentUser.getObjectId());
         data.saveInBackground();
 

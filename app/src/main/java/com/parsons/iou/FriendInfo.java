@@ -20,7 +20,7 @@ public class FriendInfo extends Activity{
         public void setNameField(){
             String name;
             String chit;
-
+        //Work in Progress
 
             // Overrides the text views to establish (Persons name) and display the correct owed total.
             TextView fullName = (TextView) findViewById(R.id.textView);
